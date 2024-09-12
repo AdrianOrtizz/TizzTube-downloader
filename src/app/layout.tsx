@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import { Oswald } from "next/font/google";
+
 import "./globals.css";
 
-const oswald = Oswald({ subsets: ["latin"] });
+import { Providers } from "@/redux/provider";
+
+import { inter } from "@/utils/fonts/Fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${oswald.className} antialiased`}>{children}</body>
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
