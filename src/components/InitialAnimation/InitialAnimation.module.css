@@ -1,0 +1,45 @@
+.landingAnimation {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e63946;
+  position: absolute;
+  animation: landingAnimation 2s 1s;
+
+  .landingAnimationLogo {
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+
+    border-left: 100px solid #f8f5f2;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation: logoAnimation 1s;
+  }
+}
+
+@keyframes landingAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(100);
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

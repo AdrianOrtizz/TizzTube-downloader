@@ -1,0 +1,65 @@
+.videoDataContainer {
+  width: 75%;
+  margin: auto;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .instructions {
+    background-color: #ddd;
+    text-align: center;
+    padding: 0.4em;
+    border-radius: 6px;
+    width: 50%;
+  }
+
+  .videoData {
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 6px;
+    background-color: #dfdfdf;
+    width: 80%;
+    display: flex;
+
+    .dataPrinc {
+      width: 60%;
+    }
+
+    .channelData {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
+      width: 70%;
+
+      .channelImg {
+        width: 3em;
+        margin-right: 1em;
+        border-radius: 100%;
+      }
+
+      .channelName {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+    }
+
+    .videoInfo {
+      .videoTitle {
+        font-size: 1.5em;
+      }
+    }
+  }
+  .mediaContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+
+    .video {
+      margin-bottom: 2em;
+      border-radius: 12px;
+    }
+  }
+}

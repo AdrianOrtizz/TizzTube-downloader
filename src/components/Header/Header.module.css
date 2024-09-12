@@ -1,0 +1,23 @@
+.headerContainer {
+  background-color: #e63946;
+  width: 100%;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .logo {
+    width: 0;
+    height: 0;
+    border-top: 25px solid transparent;
+    border-bottom: 25px solid transparent;
+    border-left: 50px solid #f8f5f2;
+
+    margin: 1em;
+  }
+
+  .title {
+    color: #f8f5f2;
+    font-size: 40px;
+  }
+}

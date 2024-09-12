@@ -1,0 +1,13 @@
+.downloadsContainer {
+  width: 15%;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 6px;
+  background-color: #dfdfdf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 25%;
+}
