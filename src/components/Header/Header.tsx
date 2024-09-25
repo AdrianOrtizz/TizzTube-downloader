@@ -17,7 +17,7 @@ const Header: React.FC = () => {
       <h1 className={`${ooohBaby.className} ${styles.title}`}>TizzTube</h1>
       <span
         onClick={handleClick}
-        className="text-xl text-white mr-4 cursor-pointer"
+        className="text-xl text-white mr-4 cursor-pointer bg-red-300 px-2 py-1 rounded-md hover:bg-red-400 transition-colors"
       >
         Historial
       </span>
