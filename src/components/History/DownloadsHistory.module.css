@@ -1,13 +1,25 @@
 .downloadsContainer {
-  width: 15%;
-  margin: 1em;
-  padding: 1em;
-  border-radius: 6px;
-  background-color: #dfdfdf;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 25%;
+  animation: InAnimation 0.2s ease-in-out;
+}
+
+.inClose {
+  animation: OutAnimation 0.2s ease-in-out;
+}
+
+@keyframes InAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes OutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
