@@ -39,7 +39,7 @@ const DownloadsHistory: React.FC = () => {
         className="bg-slate-800 opacity-40 w-screen h-screen absolute z-10"
       ></div>
       <div
-        className={`${styles.downloadsContainer} absolute z-20 2xl:w-1/4 h-3/4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-300 rounded-lg flex flex-col p-4 overflow-auto`}
+        className={`${styles.downloadsContainer} absolute z-20 container xl:w-1/2 h-3/4 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-red-300 rounded-lg flex flex-col p-4 overflow-auto`}
       >
         <h2 className="text-white self-center text-xl">
           Historial de descargas
