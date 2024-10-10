@@ -52,8 +52,8 @@ const VideoData: React.FC = () => {
             </p>
           </article>
 
-          <section className="flex flex-col lg:flex-row container items-center lg:items-start">
-            <article className="bg-red-200 container w-3/5 flex flex-col p-4 rounded-lg mb-4 lg:mr-4">
+          <section className="flex flex-col container items-center">
+            <article className="bg-red-200 md:w-2/3 container flex flex-col p-4 rounded-lg mb-4 lg:mr-4">
               <div className="flex items-center">
                 <img
                   src={data.channel.avatar[0].url}
@@ -69,7 +69,7 @@ const VideoData: React.FC = () => {
               </div>
             </article>
 
-            <article className="bg-red-200 w-3/5 lg:w-2/5 rounded-lg flex flex-col items-center">
+            <article className="bg-red-200 md:w-2/3 container rounded-lg flex flex-col items-center">
               <video
                 src={data.videos.items[0].url}
                 className="rounded w-4/5 m-6"
