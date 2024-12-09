@@ -4,7 +4,6 @@
 import { useGetVideoDataQuery } from "@/redux/services/getData";
 import { useAppSelector } from "@/redux/hooks";
 
-import { DownloadIcon, MenuIcon } from "../Icons/Icons";
 import Loading from "../Loading/Loading";
 
 import { useEffect } from "react";
@@ -45,15 +44,21 @@ const VideoData: React.FC = () => {
       {(isLoading || isFetching) && <Loading />}
       {data && !data.isLiveNow && (
         <section className="flex flex-col items-center">
-          <article className="w-96 text-center mb-6">
-            <p className="text-lg text-slate-600">
-              Para descargar el video o el audio, presiona el botón de menú ({" "}
-              <MenuIcon /> ) y dale a <DownloadIcon /> Descargar
-            </p>
-          </article>
-
           <section className="flex flex-col container items-center">
-            <article className="bg-red-200 md:w-2/3 container flex flex-col p-4 rounded-lg mb-4">
+            <article className="bg-red-200 md:w-2/3 container rounded-lg flex flex-col items-center">
+              <video
+                src={data.videos.items[0].url}
+                className="rounded w-4/5 m-6"
+                controls
+              ></video>
+              <audio
+                src={data.audios.items[0].url}
+                className="w-4/5 rounded mb-6"
+                controls
+              ></audio>
+            </article>
+
+            <article className="bg-red-200 md:w-2/3 container flex flex-col p-4 rounded-lg mt-4">
               <div className="flex items-center">
                 <img
                   src={data.channel.avatar[0].url}
@@ -67,19 +72,6 @@ const VideoData: React.FC = () => {
                 <h2 className="text-2xl">{data.title}</h2>
                 <p className="text-lg">{data.description}</p>
               </div>
-            </article>
-
-            <article className="bg-red-200 md:w-2/3 container rounded-lg flex flex-col items-center">
-              <video
-                src={data.videos.items[0].url}
-                className="rounded w-4/5 m-6"
-                controls
-              ></video>
-              <audio
-                src={data.audios.items[0].url}
-                className="w-4/5 rounded mb-6"
-                controls
-              ></audio>
             </article>
           </section>
         </section>
